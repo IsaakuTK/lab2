@@ -32,6 +32,8 @@ class First extends HTMLElement {
       this.shadowRoot.innerHTML = `
           <section>
             <button> bird </button>
+            <button> # Explorar </button>
+            <button> Configuración </button>
           </section>
       `;
     }

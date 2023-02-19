@@ -13,7 +13,7 @@ class AppContainer extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
     <h1>hola</h1>
-    <my-first></my-first>
+    <my-first class="cont1"></my-first>
     `;
   }
 }
