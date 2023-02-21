@@ -30,10 +30,11 @@ class First extends HTMLElement {
     render() {
       console.log("render");
       this.shadowRoot.innerHTML = `
+      <link rel="stylesheet" href="./src/components/left/left.css">
           <section>
-            <button> bird </button>
-            <button> # Explorar </button>
-            <button> Configuración </button>
+            <button id="uno">  </button>
+            <button id="dos"> # Explorar </button>
+            <button id="tres"> Configuración </button>
           </section>
       `;
     }
