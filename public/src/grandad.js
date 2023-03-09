@@ -14,7 +14,6 @@ class Principal extends HTMLElement{
           }
         }
 
-<<<<<<< HEAD
     connectedCallback()
     {
         this.render();
@@ -32,12 +31,5 @@ class Principal extends HTMLElement{
         });
     }
   
-=======
-  render() {
-    this.shadowRoot.innerHTML = `
-    <my-first class="cont1"></my-first>
-    `;
-  }
->>>>>>> 9d75273c4dddd87c67bd19d95e27cd199f45a31d
 }
   customElements.define("p-container", Principal);
