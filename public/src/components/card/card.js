@@ -1,34 +1,69 @@
 class Card extends HTMLElement{
 
     static get observedAttributes() {
-      return ["name", "email", "city", "company"];
+      return ["name", "username", "description", "profile", "image", "count", "image2", "image3", "image4"];
     }
   
       constructor(){
           super();
           this.attachShadow({mode:"open"});
+          this.onButtonClicked = this.onButtonClicked.bind(this);
       }
-      
-      attributeChangedCallback(pname, oldv, newv) {
-          if(oldv !== newv){
-            this[pname] = newv;
-            this.render();
-          }
-        }
   
       connectedCallback() {
           this.render();
         }
+
+        connectedCallback(){
+          this.mount();
+      }
+      
+      attributeChangedCallback(propName, oldValue, newValue){
+          this[propName] = newValue;
+          this.mount();
+      }
+      mount(){
+          this.render();
+          this.addEventListeners();
+      }
+      
+      addEventListeners(){
+          this.shadowRoot.querySelector("button")
+          .addEventListener("click", this.onButtonClicked);
+      }
+      
+      onButtonClicked(){
+          const Value = Number(this.getAttribute("count")) || 0;
+          this.setAttribute("count", Value + 1);
+      }
   
         render(){
           this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="./src/components/card/card.css">
-            <section>
-              <h1>${this.name}</h1>
-              <p>${this.email}</p>
-              <p> ${this.city} </p>
-              <p> ${this.company} </p>
-            </section>
+            <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+
+            <section class="tweet-wrap">
+              <section class="tweet-header">
+                <img src="${this.profile}" alt="" class="avator">
+                <section class="tweet-header-info">
+                ${this.name} <span>${this.username}</span><span>. Mar 10
+            </span>
+                  <p>${this.description}</p>
+                </section>
+
+              </section>
+              <section class="tweet-img-wrap">
+                <img src="${this.image}" alt="" class="tweet-img">
+                <button><img src="${this.image2}" height ="50" width="50"</button>
+                <p>${this.count || 0}</p>
+                <button><img src="${this.image3}" height ="50" width="50"</button>
+                
+                <button><img src="${this.image4}" height ="50" width="50"</button>
+                
+              </section>
         `;
         }
         

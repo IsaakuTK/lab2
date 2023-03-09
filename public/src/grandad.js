@@ -2,6 +2,7 @@ import * as components from "./components/dad.js"
 import data from "./data.js"
 import data2 from "./data2.js"
 import data3 from "./data3.js"
+import data4 from "./data4.js"
 
 class Principal extends HTMLElement{
 
@@ -11,21 +12,26 @@ class Principal extends HTMLElement{
         this.people =[];
         this.left=[];
         this.right=[];
+        this.image2=[];
         var i=0
         while(i<data.length){
             this.people.push(data[i]);
             i++;
           }
-
-        var j=0
-        while(j<data2.length){
-            this.left.push(data2[j]);
-            j++;
+        i=0
+        while(i<data2.length){
+            this.left.push(data2[i]);
+            i++;
           }
-          var h=0
-          while(h<data3.length){
-            this.right.push(data3[h]);
-            h++;
+          i=0
+          while(i<data3.length){
+            this.right.push(data3[i]);
+            i++;
+          }
+          i=0;
+          while(i<data4.length){
+            this.image2.push(data4[i]);
+            i++;
           }
         }
 
@@ -37,15 +43,17 @@ class Principal extends HTMLElement{
   
     render()
     {
+      this.shadowRoot.innerHTML += `
+        <my-search></my-search>
+        `
 
        this.people.forEach((person) => {
         this.shadowRoot.innerHTML += `
-        <my-first name= "${person.name}" email= "${person.email}" city= "${person.address.city}" company= "${person.company.name}"></my-first>
-        <my-like></my-like>
+        <my-first name="${person.name}" username="${person.username}" description="${person.description}" profile="${person.profile}" image="${person.image}" image2="${person.image2}" image3="${person.image3}" image4="${person.image4}"></my-first>
         `
         });
-
         
+
 
         this.left.forEach((button) => {
             this.shadowRoot.innerHTML += `
@@ -54,7 +62,7 @@ class Principal extends HTMLElement{
             
         });
 
-
+        
 
         this.shadowRoot.innerHTML += ` 
         <h1>¿Eres nuevo en Twitter?</h1>
