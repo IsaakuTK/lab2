@@ -1,24 +1,35 @@
-import * as components from "./components/dad.js";
+import * as components from "./components/dad.js"
+import data from "./data.js"
 
-class AppContainer extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" }); // encapsulation, mode open means this is reachable for js on your web
-  }
+class Principal extends HTMLElement{
 
-  connectedCallback() {
-    this.render();
-  }
+    constructor(){
+        super();
+        this.attachShadow({mode:"open"});
+        this.people =[];
+        var i=0
+        while(i<data.length){
+            this.people.push(data[i]);
+            i++;
+          }
+        }
 
-  render() {
-    this.shadowRoot.innerHTML = `
-    <h1>hola</h1>
-    <my-first class="cont1"></my-first>
-    `;
-  }
+    connectedCallback()
+    {
+        this.render();
+    }
+  
+    render()
+    {
+
+       this.people.forEach((person) => {
+        this.shadowRoot.innerHTML += `
+        <my-first name= "${person.name}" email= "${person.email}" city= "${person.address.city}" company= "${person.company.name}"></my-first>
+        <my-like></my-like>
+        <my-button>${"elpp".name}</my-button>   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        `
+        });
+    }
+  
 }
-
-customElements.define("app-container", AppContainer);
-
-// reference: https://developer.mozilla.org/es/docs/Web/Web_Components
-// reference: https://www.youtube.com/watch?v=neko6u1vHcY&list=PLTd5ehIj0goNQNCgtu-M2oGGpyQ1m6nxo
+  customElements.define("p-container", Principal);
