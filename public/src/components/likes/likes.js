@@ -35,10 +35,11 @@ onButtonClicked(){
 }
 render(){
     this.shadowRoot.innerHTML = `
-    <link rel="stylesheet" href="./src/components/button/button.css">
-    <div>
-    <button>Likes ${this.count || 0}</button>
-    </div>
+    <link rel="stylesheet" href="./src/components/likes/likes.css">
+    <section>
+    <button><img src="https://www.vectorico.com/download/emoticon/heart-icon.png" height ="50" width="50"</button>
+    <p>${this.count || 0}</p>
+    </section>
 `;
 }
     

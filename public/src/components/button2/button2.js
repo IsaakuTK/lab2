@@ -1,7 +1,7 @@
-class Button extends HTMLElement {
+class Button2 extends HTMLElement {
     // this is how you declare which props are you interested in
     static get observedAttributes() {
-      return ["name", "image"];
+      return ["name"];
     }
   
     constructor(){
@@ -23,15 +23,15 @@ class Button extends HTMLElement {
   
       render(){
         this.shadowRoot.innerHTML = `
-          <link rel="stylesheet" href="./src/components/button/button.css">
+          <link rel="stylesheet" href="./src/components/button2/button2.css">
           <section>
-          <button><img src="${this.image || ""}" height ="50" width="50"</button>
+          <button> ${this.name || ""} </button>
           </section>
       `;
       }
       
 }
   
-  customElements.define("my-button", Button);
+  customElements.define("my-button2", Button2);
   
-  export default Button;
+  export default Button2;

@@ -1,11 +1,13 @@
 button
 {
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: black;
+    border-color: transparent;
 }
 h3{
-    color: black;
+    color: black;   
 }
-section{
-    color: blue;
+section
+{
+    border-color: transparent;
 }
