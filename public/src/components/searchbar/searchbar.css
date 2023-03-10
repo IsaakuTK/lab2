@@ -1,70 +1,41 @@
-
-    /* this is a recreation of twitter search in css */
-.form {
-  --input-text-color: #fff;
-  --input-bg-color: #283542;
-  --focus-input-bg-color: transparent;
-  --text-color: #949faa;
-  --active-color: #1b9bee;
-  --width-of-input: 200px;
-  --inline-padding-of-input: 1.2em;
-  --gap: 0.9rem;
-}
-/* form style */
-.form {
-  font-size: 0.9rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  width: var(--width-of-input);
-  position: relative;
-  isolation: isolate;
-}
-/* a fancy bg for showing background and border when focus. */
-.fancy-bg {
-  position: absolute;
-  width: 100%;
-  inset: 0;
-  background: var(--input-bg-color);
-  border-radius: 30px;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-/* label styling */
-label {
-  width: 100%;
-  padding: 0.8em;
-  height: 40px;
-  padding-inline: var(--inline-padding-of-input);
-  display: flex;
-  align-items: center;
-}
-
 .searchbar {
-    overflow: hidden;
-    background-color: #ffffff;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    padding-top: 30px;
-    padding-left: 820px;
-  }
-  
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  padding-top: 30px;
+  padding-left: 820px;
+  z-index: 1;
+}
 
-  .buttonsearch {
-    float: left;
-    opacity: 30%;
-    background: transparent;
+.bar{
+    background-color: #eee;
     border: transparent;
-    display: flex;
-    color: #f2f2f2;
-    padding-bottom: 5px;
-    padding-top: 10px;
-    padding-right: 10px;
-    text-decoration: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 13em;
+    border-radius: 1rem;
+    color: 1DA1F2;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    margin-bottom: 20px;
   }
-  
-  
 
+  .container input:focus {
+    outline-color: #1DA1F2;
+  }
+
+
+.buttonsearch {
+  float: left;
+  opacity: 30%;
+  background: transparent;
+  border: transparent;
+  display: flex;
+  color: #f2f2f2;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
