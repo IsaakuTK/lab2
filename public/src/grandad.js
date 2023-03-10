@@ -50,6 +50,18 @@ class Principal extends HTMLElement{
         `           
     });
 
+    this.right.forEach((bu) => {
+      this.shadowRoot.innerHTML += `
+      <section>
+      <my-button2 
+      name="${bu.name}" 
+      name2="${bu.name2}" 
+      name3="${bu.name3}"
+      </my-button2>
+      </section>
+      `
+    });
+
       this.shadowRoot.innerHTML += `
         <my-search></my-search>
         `
@@ -59,18 +71,6 @@ class Principal extends HTMLElement{
         <my-first name="${person.name}" username="${person.username}" description="${person.description}" profile="${person.profile}" image="${person.image}" image2="${person.image2}" image3="${person.image3}" image4="${person.image4}"></my-first>
         `
         });
-
-        this.right.forEach((bu) => {
-        this.shadowRoot.innerHTML += `
-        <section>
-        <my-button2 
-        name="${bu.name}" 
-        name2="${bu.name2}" 
-        name3="${bu.name3}"
-        </my-button2>
-        </section>
-        `
-      });
       }
   
 }

@@ -1,1 +1,10 @@
 
+section{
+    background: transparent;
+    border: transparent;
+    top: 20px; 
+    padding-top: 60px;
+    padding-right: 550px;
+    display: flex;
+    flex-direction: row;
+}
