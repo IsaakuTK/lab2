@@ -59,22 +59,18 @@ class Principal extends HTMLElement{
         <my-first name="${person.name}" username="${person.username}" description="${person.description}" profile="${person.profile}" image="${person.image}" image2="${person.image2}" image3="${person.image3}" image4="${person.image4}"></my-first>
         `
         });
-        
 
-      
-        this.shadowRoot.innerHTML += ` 
-        <link rel="stylesheet" href="./grandad.css">
-        <h1>¿Eres nuevo en Twitter?</h1>
-        <p>Regístrate ahora para obtener tu propia cronología personalizada.</p>
-        <p>Al registrarte, aceptas los Términos de servicio y la Política de privacidad, incluida la política de Uso de Cookies.</p>
-        `
-          this.right.forEach((button2) => {
-            this.shadowRoot.innerHTML += `
+        this.right.forEach((bu) => {
+        this.shadowRoot.innerHTML += `
         <section>
-        <my-button2 name="${button2.name}" </my-button2>
+        <my-button2 
+        name="${bu.name}" 
+        name2="${bu.name2}" 
+        name3="${bu.name3}"
+        </my-button2>
         </section>
         `
-        });
+      });
       }
   
 }
