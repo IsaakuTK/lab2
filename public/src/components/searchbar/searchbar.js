@@ -25,8 +25,8 @@ class Searchbar extends HTMLElement{
             <link rel="stylesheet" href="./src/components/searchbar/searchbar.css">
 
             <section class="container">
-            <form action="" class="searchbar"><input type="text" placeholder="search anything" name="q">
-            <button class="buttonsearch "type="submit"><img src="https://cdn-icons-png.flaticon.com/512/3917/3917754.png" height ="20" width="20"></button>
+            <form action="" class="searchbar"><input type="text" placeholder="search anything" class="bar">
+            <button class="buttonsearch "type="submit"><img src="https://cdn-icons-png.flaticon.com/512/3917/3917754.png" height ="35" width="35"></button>
             </form>
             </section>
         `;

@@ -28,7 +28,7 @@ class Button2 extends HTMLElement {
           <h1>¿Eres nuevo en Twitter?</h1>
           <p>Regístrate ahora para obtener tu propia cronología personalizada.</p>
           <p>Al registrarte, aceptas los Términos de servicio y la Política de privacidad, incluida la política de Uso de Cookies.</p>
-          <button  class="about"> ${this.name || "a"} </button>
+          <button  class="about">${this.name || "a"}</button>
           <button  class="about2"> ${this.name2 || "a"} </button>
           <button  class="about3"> ${this.name3 || "a"} </button>
           </section>

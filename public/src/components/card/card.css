@@ -1,13 +1,13 @@
 .todo{
-  margin-top: -450px;
-  padding: 180px;
+  margin-top: -560px;
+  padding: 235px;
 }
 
 
 body {
     background: #e6ecf0;
-    font-family: 'Asap', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
   }
   img {
     max-width:100%;
@@ -34,6 +34,7 @@ body {
     display: flex;
     align-items:flex-start;
     font-size:14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   .tweet-header-info {
     font-weight:bold;
