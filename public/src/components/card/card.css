@@ -38,7 +38,7 @@ body {
     font-weight:normal;
     margin-left: 5px;
   }
-  .tweet-header-info p {
+  .tweet-header-info p {  
     font-weight:normal;
     margin-top: 5px;
 
@@ -47,6 +47,7 @@ body {
     padding-left: 60px;
   }
 
+ 
   button
 {
     background-color: transparent;
@@ -56,4 +57,10 @@ body {
     position: relative;
     flex-wrap: wrap;   
     flex-direction: row;
+}
+
+.pepe{
+  display: flex;
+  flex-direction: row;
+  padding-left: 10%;
 }

@@ -57,13 +57,14 @@ class Card extends HTMLElement{
               </section>
               <section class="tweet-img-wrap">
                 <img src="${this.image}" alt="" class="tweet-img">
-                <button><img src="${this.image2}" height ="50" width="50"</button>
+              </section>
+              <label class="pepe">
+              <button><img src="${this.image2}" height ="50" width="50"</button>
                 <p>${this.count || 0}</p>
                 <button><img src="${this.image3}" height ="50" width="50"</button>
                 
                 <button><img src="${this.image4}" height ="50" width="50"</button>
-                
-              </section>
+              </label>
         `;
         }
         

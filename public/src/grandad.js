@@ -43,6 +43,13 @@ class Principal extends HTMLElement{
   
     render()
     {
+
+      this.left.forEach((button) => {
+        this.shadowRoot.innerHTML += `
+        <my-button name = "${button.name}" image ="${button.image}"></my-button>
+        `           
+    });
+
       this.shadowRoot.innerHTML += `
         <my-search></my-search>
         `
@@ -54,16 +61,7 @@ class Principal extends HTMLElement{
         });
         
 
-
-        this.left.forEach((button) => {
-            this.shadowRoot.innerHTML += `
-            <my-button name = "${button.name}" image ="${button.image}"></my-button>
-            `
-            
-        });
-
-        
-
+      
         this.shadowRoot.innerHTML += ` 
         <h1>¿Eres nuevo en Twitter?</h1>
         <p>Regístrate ahora para obtener tu propia cronología personalizada.</p>
@@ -72,7 +70,7 @@ class Principal extends HTMLElement{
           this.right.forEach((button2) => {
             this.shadowRoot.innerHTML += `
         <section>
-        <my-button2 "${button2.name}" </my-button2>
+        <my-button2 name="${button2.name}" </my-button2>
         </section>
         `
         });

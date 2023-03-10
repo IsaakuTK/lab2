@@ -1,36 +1,3 @@
-/* *{
-    width: 100px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-.container{
-    width:100px;
-    min-height: 100vh;
-    padding: 5%;
-    background-image: linear-gradient(rgba(0,8,51,0.9),rgba(0,8,51,0.9)), url("https://www.ejiltalk.org/wp-content/uploads/2021/03/pexels-photo-110854.jpeg");
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.search-bar{
-    width: 100px;
-    max-width: 700px;
-    background: rgba(225, 225, 225, 0.2);
-    display: flex;
-    align-items: center;
-    border-radius: 60px;
-    padding: 10px 20px;
-}
-.search-bar input{
-    background-color: black;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 24px 20px;
-} */
 
 .searchbar {
     overflow: hidden;
@@ -39,7 +6,7 @@
     top: 0; 
     width: 100%; 
     padding-top: 30px;
-    padding-left: 845px;
+    padding-left: 820px;
   }
   
 
