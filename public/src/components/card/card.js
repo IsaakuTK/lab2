@@ -59,11 +59,11 @@ class Card extends HTMLElement{
                 <img src="${this.image}" alt="" class="tweet-img">
               </section>
               <label class="pepe">
-              <button><img src="${this.image2}" height ="50" width="50"</button>
+              <button><img src="${this.image2}" height ="30" width="30"</button>
                 <p>${this.count || 0}</p>
-                <button><img src="${this.image3}" height ="50" width="50"</button>
+                <button><img src="${this.image3}" height ="30" width="30"</button>
                 
-                <button><img src="${this.image4}" height ="50" width="50"</button>
+                <button><img src="${this.image4}" height ="30" width="30"</button>
               </label>
               </section>
         `;
