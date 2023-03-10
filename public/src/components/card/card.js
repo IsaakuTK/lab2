@@ -44,7 +44,7 @@ class Card extends HTMLElement{
             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 
-
+           <section class="todo">
             <section class="tweet-wrap">
               <section class="tweet-header">
                 <img src="${this.profile}" alt="" class="avator">
@@ -65,6 +65,7 @@ class Card extends HTMLElement{
                 
                 <button><img src="${this.image4}" height ="50" width="50"</button>
               </label>
+              </section>
         `;
         }
         

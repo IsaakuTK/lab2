@@ -25,7 +25,7 @@ class Button2 extends HTMLElement {
         this.shadowRoot.innerHTML = `
           <link rel="stylesheet" href="./src/components/button2/button2.css">
           <section>
-          <button> ${this.name || ""} </button>
+          <button  class="about"> ${this.name || ""} </button>
           </section>
       `;
       }

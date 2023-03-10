@@ -24,9 +24,9 @@ class Button extends HTMLElement {
       render(){
         this.shadowRoot.innerHTML = `
           <link rel="stylesheet" href="./src/components/button/button.css">
-          <section>
-          <button><img src="${this.image || ""}" height ="50" width="50"</button>
-          </section>
+         
+          <button class="buttons"><img src="${this.image || ""}" height ="50" width="50"</button>
+     
       `;
       }
       

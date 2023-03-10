@@ -63,6 +63,7 @@ class Principal extends HTMLElement{
 
       
         this.shadowRoot.innerHTML += ` 
+        <link rel="stylesheet" href="./grandad.css">
         <h1>¿Eres nuevo en Twitter?</h1>
         <p>Regístrate ahora para obtener tu propia cronología personalizada.</p>
         <p>Al registrarte, aceptas los Términos de servicio y la Política de privacidad, incluida la política de Uso de Cookies.</p>
