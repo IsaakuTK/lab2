@@ -22,11 +22,11 @@ class Searchbar extends HTMLElement{
   
         render(){
           this.shadowRoot.innerHTML = `
-            <link rel="stylesheet" href="./src/components/card/card.css">
+            <link rel="stylesheet" href="./src/components/searchbar/searchbar.css">
 
             <section class="container">
-            <form action="" class="search-bar"><input type="text" placeholder="search anything" name="q">
-            <button type="submit"><img src="https://cdn-icons-png.flaticon.com/512/3917/3917754.png" height ="30" width="30"></button>
+            <form action="" class="searchbar"><input type="text" placeholder="search anything" name="q">
+            <button class="buttonsearch "type="submit"><img src="https://cdn-icons-png.flaticon.com/512/3917/3917754.png" height ="20" width="20"></button>
             </form>
             </section>
         `;
